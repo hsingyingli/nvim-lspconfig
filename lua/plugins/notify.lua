@@ -12,7 +12,7 @@ return {
     },
     opts = {
       background_colour = "#000000",
-      timeout = 500,
+      timeout = 2000,
       max_height = function()
         return math.floor(vim.o.lines * 0.40)
       end,
@@ -25,11 +25,6 @@ return {
     },
     init = function()
       -- when noice is not enabled, install notify on VeryLazy
-      -- if not Util.has("noice.nvim") then
-      -- 	Util.on_very_lazy(function()
-      -- 		vim.notify = require("notify")
-      -- 	end)
-      -- end
     end,
   },
 }

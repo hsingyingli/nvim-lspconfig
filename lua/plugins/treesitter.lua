@@ -22,6 +22,7 @@ return {
         "ruby",
         "javascript",
         "typescript",
+        "markdown",
       },
 
       -- matchup = {

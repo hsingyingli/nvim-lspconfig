@@ -7,6 +7,7 @@ return {
       },
       build = "make",
       "nvim-telescope/telescope-file-browser.nvim",
+      "princejoogie/dir-telescope.nvim",
     },
     keys = {
       {
@@ -108,6 +109,12 @@ return {
         desc = "grep",
       },
       {
+        "sgd",
+        function()
+          require("telescope").extensions.dir.live_grep({})
+        end,
+      },
+      {
         "gf",
         function()
           local builtin = require("telescope.builtin")
@@ -141,6 +148,11 @@ return {
         },
       }
       opts.extensions = {
+        dir = {
+          hidden = true,
+          no_ignore = true,
+          show_preview = true,
+        },
         file_browser = {
           theme = "dropdown",
           -- disables netrw and use telescope-file-browser in its place
