@@ -1,6 +1,7 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+
 vim.g.mapleader = " "
 
 vim.scriptencoding = "utf-8"
@@ -40,8 +41,8 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
 
-vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
-vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
+-- vim.cmd([[au BufNewFile,BufRead *.astro setf astro]])
+-- vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 
 if vim.fn.has("nvim-0.8") == 1 then
   vim.opt.cmdheight = 0
@@ -62,3 +63,6 @@ vim.g.lazygit_use_custom_config_file_path = 0 -- config file path is evaluated i
 vim.g.lazygit_config_file_path = "" -- custom config file path
 -- vim.o.updatetime = 250
 -- vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+
+-- vim.g.lazyvim_ruby_lsp = "solargraph"
+-- vim.g.lazyvim_ruby_formatter = "rubocop"

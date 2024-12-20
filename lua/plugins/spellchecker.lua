@@ -1,5 +1,0 @@
-return {
-  {
-    "kamykn/spelunker.vim",
-  },
-}
